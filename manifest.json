@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "HBO Max WV Ripper Assistant",
+  "description": "Assists the Widevine L3 Decryptor by producing HBO Max related metadata and manifests",
+  "version": "1.0.0",
+  "author": "Puyodead1",
+  "browser_action": {
+    "default_icon": "img/icon128.png"
+  },
+  "icons": {
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://play.hbomax.com/feature/*",
+        "*://www.play.hbomax.com/feature/*"
+      ],
+      "all_frames": true,
+      "js": ["content_script.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "pages/options.html",
+    "open_in_tab": false
+  },
+  "web_accessible_resources": ["app.js"],
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://play.hbomax.com/feature/*",
+    "*://www.play.hbomax.com/feature/*"
+  ]
+}
