@@ -1,6 +1,3 @@
-![GitHub](https://img.shields.io/github/license/Puyodead1/wv-hbomax-extension?style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/Puyodead1/wv-hbomax-extension?style=for-the-badge)
-
 # Widevine HBOMax Extension
 This is a heavily modified version of the netflix 1080p chrome extension that basically just intercepts the HBOMax main javascript file and loads my modified version instead.<br>
 Its primary use is for making metadata and manifest information available for my modified widevine l3 decryptor extension and backend downloader.<br>
